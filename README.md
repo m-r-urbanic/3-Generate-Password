@@ -13,7 +13,9 @@ This project can be downloaded (as a whole) and ran in Visual Studio Code with n
 
 ## Credits
 
-Please see links to all code referanced or used and images used below. 
+Please see links to all code referanced or used and images used below.
+
+JavaScript Popup Boxes, W3Schools, https://www.w3schools.com/js/js_popup.asp
 
 ## License
 
