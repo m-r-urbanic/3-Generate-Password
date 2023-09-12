@@ -6,17 +6,15 @@ var choiceNumeric;
 var choiceSpecialCharacter;
 var passwordLength;
 var lowercaseCharacter;
-var uppercaseCharacter = '2';
+var uppercaseCharacter;
 var numericCharacter = '3';
 var specialCharacter = '4';
 
-const special = ' !"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~';
 
 lowercaseCharacter = 'abcdefghijklmnopqrstuvwxyz';
-var uppercase;
-uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-var numeric;
-numeric = '1234567890';
+uppercaseCharacter = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+numericCharacter = '1234567890';
+specialCharacter = ' !"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~';
 var ten = 10;
 var resulty = [];
 
@@ -85,7 +83,7 @@ function writePassword() {
 
 
   function makeResult(){
-      const arrayTypes = [lowercaseCharacter, uppercase, numeric, special];
+      const arrayTypes = [lowercaseCharacter, uppercaseCharacter, numericCharacter, specialCharacter];
       // create function that gets random type
       function getRandomCharacterType(arr) {
         return arr[Math.floor(Math.random() * arr.length)]
