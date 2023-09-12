@@ -7,8 +7,8 @@ var choiceSpecialCharacter;
 var passwordLength;
 var lowercaseCharacter;
 var uppercaseCharacter;
-var numericCharacter = '3';
-var specialCharacter = '4';
+var numericCharacter;
+var specialCharacter;
 
 
 lowercaseCharacter = 'abcdefghijklmnopqrstuvwxyz';
@@ -18,7 +18,7 @@ specialCharacter = ' !"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~';
 var ten = 10;
 var resulty = [];
 
-/* // create array of variable types
+// create array of variable types
 const validationTypes = [];
 
 // Write password to the #password input
@@ -31,16 +31,16 @@ function writePassword() {
     window.alert("Please choose if your password should require lowercase, uppercase, numeric, or special characters. Your password should require at least one type. If you do not select a type these options will replay.");
     choiceLowercase = confirm("If you want to require lowercase characters, click 'Ok', if not, click 'Cancel'.");
       if (choiceLowercase)
-      validationTypes.push("1");
+      validationTypes.push(lowercaseCharacter);
     choiceUppercase = confirm("If you want to require uppercase characters, click 'Ok', if not, click 'Cancel'.");
       if (choiceUppercase)
-      validationTypes.push("2");
+      validationTypes.push(uppercaseCharacter);
     choiceNumeric = confirm("If you want to require numeric characters, click 'Ok', if not, click 'Cancel'.");
       if (choiceNumeric)
-      validationTypes.push("3");
+      validationTypes.push(numericCharacter);
     choiceSpecialCharacter = confirm("If you want to require special characters, click 'Ok', if not, click 'Cancel'.");
       if (choiceSpecialCharacter)
-      validationTypes.push("4");
+      validationTypes.push(specialCharacter);
   }
 
   // Call password type prompts
@@ -76,7 +76,7 @@ function writePassword() {
   }
 
   // Call results
-  promptResult(); */
+  promptResult(); 
 
 
 
@@ -113,6 +113,7 @@ function writePassword() {
       console.log(resulty.join(''));
   
   console.log(generateRandomString(ten));
+ 
 
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -120,7 +121,7 @@ function writePassword() {
   // Set contents of the password textbox equal to password variable
   passwordText.value = password;
 
-//}
+}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
