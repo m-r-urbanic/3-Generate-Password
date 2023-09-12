@@ -11,19 +11,7 @@ var numericCharacter = '3';
 var specialCharacter = '4';
 
 // create array of variable types
-const validationTypes = [lowercaseCharacter, uppercaseCharacter, numericCharacter, specialCharacter];
-
-// create function that gets random type
-function getRandom(arr) {
-  return arr[Math.floor(Math.random() * arr.length)]
-}
-
-// select random varaible and display in console
-let randomValidation = getRandom(Object.values(validationTypes));
-console.log('Random validation type', randomValidation);
-
-// empty array
-const testy = [];
+const validationTypes = [];
 
 // Write password to the #password input
 function writePassword() {
@@ -35,16 +23,16 @@ function writePassword() {
     window.alert("Please choose if your password should require lowercase, uppercase, numeric, or special characters. Your password should require at least one type. If you do not select a type these options will replay.");
     choiceLowercase = confirm("If you want to require lowercase characters, click 'Ok', if not, click 'Cancel'.");
       if (choiceLowercase)
-      testy.push("1");
+      validationTypes.push("1");
     choiceUppercase = confirm("If you want to require uppercase characters, click 'Ok', if not, click 'Cancel'.");
       if (choiceUppercase)
-      testy.push("2");
+      validationTypes.push("2");
     choiceNumeric = confirm("If you want to require numeric characters, click 'Ok', if not, click 'Cancel'.");
       if (choiceNumeric)
-      testy.push("3");
+      validationTypes.push("3");
     choiceSpecialCharacter = confirm("If you want to require special characters, click 'Ok', if not, click 'Cancel'.");
       if (choiceSpecialCharacter)
-      testy.push("4");
+      validationTypes.push("4");
   }
 
   // Call password type prompts
@@ -79,10 +67,19 @@ function writePassword() {
   }
   }
 
-  console.log('Test array', testy);
-
   // Call results
   promptResult();
+
+  console.log(validationTypes);
+
+  // create function that gets random type
+  function getRandomCharacterType(arr) {
+    return arr[Math.floor(Math.random() * arr.length)]
+  }
+
+  // select random varaible and display in console
+  let randomValidation = getRandomCharacterType(Object.values(validationTypes));
+  console.log('Random validation type', randomValidation);
 
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
