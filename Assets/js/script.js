@@ -5,10 +5,20 @@ var choiceUppercase;
 var choiceNumeric;
 var choiceSpecialCharacter;
 var passwordLength;
-var lowercaseCharacter = '1';
+var lowercaseCharacter;
 var uppercaseCharacter = '2';
 var numericCharacter = '3';
 var specialCharacter = '4';
+
+const special = ' !"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~';
+
+lowercaseCharacter = 'abcdefghijklmnopqrstuvwxyz';
+var uppercase;
+uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+var numeric;
+numeric = '1234567890';
+var ten = 10;
+var resulty = [];
 
 /* // create array of variable types
 const validationTypes = [];
@@ -71,19 +81,11 @@ function writePassword() {
   promptResult(); */
 
 
-  const special = ' !"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~';
-  var lowercase;
-  lowercase = 'abcdefghijklmnopqrstuvwxyz';
-  var uppercase;
-  uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  var numeric;
-  numeric = '1234567890';
-  var ten = 10;
-  var resulty = [];
+
 
 
   function makeResult(){
-      const arrayTypes = [lowercase, uppercase, numeric, special];
+      const arrayTypes = [lowercaseCharacter, uppercase, numeric, special];
       // create function that gets random type
       function getRandomCharacterType(arr) {
         return arr[Math.floor(Math.random() * arr.length)]
@@ -113,19 +115,6 @@ function writePassword() {
       console.log(resulty.join(''));
   
   console.log(generateRandomString(ten));
-
-  var charLength = 10;
-
-  /* console.log(validationTypes);
-
-  // create function that gets random type
-  function getRandomCharacterType(arr) {
-    return arr[Math.floor(Math.random() * arr.length)]
-  }
-
-  // select random varaible and display in console
-  let randomValidation = getRandomCharacterType(Object.values(validationTypes));
-  console.log('Random validation type', randomValidation); */
 
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
