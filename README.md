@@ -24,6 +24,7 @@ Greater than or equal (>=), mdn_web_docs, https://developer.mozilla.org/en-US/do
 How to use JavaScript to show a confirm message, tutorialspoint, https://www.tutorialspoint.com/How-to-use-JavaScript-to-show-a-confirm-message
 Password Special Characters, OWASP, https://owasp.org/www-community/password-special-characters
 4 Ways to Generate Random Strings in JavaScript, SLING ACADEMY, https://www.slingacademy.com/article/ways-to-generate-random-strings-in-javascript/#:~:text=We%20can%20use%20the%20Math,using%20the%20charAt()%20function.
+Converting Array to String in JavaScript, REQBIN, https://reqbin.com/code/javascript/ot8wzla9/javascript-array-to-string-example
 
 
 ## License

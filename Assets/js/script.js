@@ -110,6 +110,7 @@ function writePassword() {
       }
       
       console.log(resulty);
+      console.log(resulty.join(''));
   
   console.log(generateRandomString(ten));
 
