@@ -87,15 +87,15 @@ function writePassword() {
       }
 
       // select random varaible and display in console
-      let randomValidation2 = getRandomCharacterType(Object.values(validationTypes));
-      //console.log('Random validation type', randomValidation2);
+      let randomVariableSelect = getRandomCharacterType(Object.values(validationTypes));
+  
 
       // generate a random character based on the selected character type
       const generateRandomString = (length) => {
         let result = '';
-        const charactersLength = randomValidation2.length;
+        const charactersLength = randomVariableSelect.length;
         for (let i = 0; i < length; i++) {
-          result += randomValidation2.charAt(Math.floor(Math.random() * charactersLength));
+          result += randomVariableSelect.charAt(Math.floor(Math.random() * charactersLength));
         }
         return result;
       };
