@@ -1,5 +1,10 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+var choiceLowercase ;
+var choiceUppercase;
+var choiceNumeric;
+var choiceSpecialCharater;
+
 
 
 // Write password to the #password input
@@ -9,10 +14,10 @@ function writePassword() {
   // Note: binary confirmation box chosen because it reduces the amount of potential inputs, and reduces the question to a simple 'yes/no' with no oppertunity for errors.
   // Made prompts into a function so that they can be called again if the user does not select at least one set of criteria
   function passwordPrompts(){
-    var choiceLowercase = confirm("If you want to require lowercase characters, click 'Ok', if not, click 'Cancel'.");
-    var choiceUppercase = confirm("If you want to require uppercase characters, click 'Ok', if not, click 'Cancel'.");
-    var choiceNumeric = confirm("If you want to require numeric characters, click 'Ok', if not, click 'Cancel'.");
-    var choiceSpecialCharater = confirm("If you want to require special characters, click 'Ok', if not, click 'Cancel'.");
+    choiceLowercase = confirm("If you want to require lowercase characters, click 'Ok', if not, click 'Cancel'.");
+    choiceUppercase = confirm("If you want to require uppercase characters, click 'Ok', if not, click 'Cancel'.");
+    choiceNumeric = confirm("If you want to require numeric characters, click 'Ok', if not, click 'Cancel'.");
+    choiceSpecialCharater = confirm("If you want to require special characters, click 'Ok', if not, click 'Cancel'.");
   }
 
   // Call function
