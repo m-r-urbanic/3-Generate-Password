@@ -80,10 +80,10 @@ function writePassword() {
 
 
 
-
+  const arrayTypes = [lowercaseCharacter, uppercaseCharacter, numericCharacter, specialCharacter];
 
   function makeResult(){
-      const arrayTypes = [lowercaseCharacter, uppercaseCharacter, numericCharacter, specialCharacter];
+      
       // create function that gets random type
       function getRandomCharacterType(arr) {
         return arr[Math.floor(Math.random() * arr.length)]
