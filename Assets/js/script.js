@@ -79,27 +79,37 @@ function writePassword() {
   var numeric;
   numeric = '1234567890';
   var ten = 10;
+  var resulty = [];
 
-  const arrayTypes = [lowercase, uppercase, numeric];
-  // create function that gets random type
-  function getRandomCharacterType(arr) {
-    return arr[Math.floor(Math.random() * arr.length)]
+
+  function makeResult(){
+      const arrayTypes = [lowercase, uppercase, numeric, special];
+      // create function that gets random type
+      function getRandomCharacterType(arr) {
+        return arr[Math.floor(Math.random() * arr.length)]
+      }
+
+      // select random varaible and display in console
+      let randomValidation2 = getRandomCharacterType(Object.values(arrayTypes));
+      console.log('Random validation type', randomValidation2);
+
+      const generateRandomString = (length) => {
+        let result = '';
+        const charactersLength = randomValidation2.length;
+        for (let i = 0; i < length; i++) {
+          result += randomValidation2.charAt(Math.floor(Math.random() * charactersLength));
+        }
+        return result;
+      };
+
+      resulty.push(generateRandomString(1));
   }
-
-  // select random varaible and display in console
-  let randomValidation2 = getRandomCharacterType(Object.values(arrayTypes));
-  console.log('Random validation type', randomValidation2);
-
-  const generateRandomString = (length) => {
-    let result = '';
-    const charactersLength = randomValidation2.length;
-    for (let i = 0; i < length; i++) {
-      result += randomValidation2.charAt(Math.floor(Math.random() * charactersLength));
-    }
-    return result;
-  };
-
-
+      
+      for (var i = 0; i < ten; i++) {
+        makeResult();
+      }
+      
+      console.log(resulty);
   
   console.log(generateRandomString(ten));
 
