@@ -80,38 +80,30 @@ function writePassword() {
   numeric = '1234567890';
   var ten = 10;
 
-  const generateRandomString = (length) => {
-    let result = '';
-    const charactersLength = special.length;
-    for (let i = 0; i < length; i++) {
-      result += special.charAt(Math.floor(Math.random() * charactersLength));
-    }
-    return result;
-  };
-
-    const arrayTypes = [lowercase, uppercase, numeric];
-    // create function that gets random type
-    function getRandomCharacterType(arr) {
-      return arr[Math.floor(Math.random() * arr.length)]
-    }
-  
-    // select random varaible and display in console
-    let randomValidation2 = getRandomCharacterType(Object.values(arrayTypes));
-    console.log('Random validation type', randomValidation2);
-  
-  console.log(generateRandomString(ten));
-
-  var charLength = 10;
-  const validationCharType = [];
-
- 
+  const arrayTypes = [lowercase, uppercase, numeric];
+  // create function that gets random type
   function getRandomCharacterType(arr) {
     return arr[Math.floor(Math.random() * arr.length)]
   }
 
   // select random varaible and display in console
-  let randomValidation = getRandomCharacterType(Object.values(validationCharType));
-  console.log('Random validation type', randomValidation);
+  let randomValidation2 = getRandomCharacterType(Object.values(arrayTypes));
+  console.log('Random validation type', randomValidation2);
+
+  const generateRandomString = (length) => {
+    let result = '';
+    const charactersLength = randomValidation2.length;
+    for (let i = 0; i < length; i++) {
+      result += randomValidation2.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+  };
+
+
+  
+  console.log(generateRandomString(ten));
+
+  var charLength = 10;
 
   /* console.log(validationTypes);
 
