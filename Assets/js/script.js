@@ -88,8 +88,30 @@ function writePassword() {
     }
     return result;
   };
+
+    const arrayTypes = [lowercase, uppercase, numeric];
+    // create function that gets random type
+    function getRandomCharacterType(arr) {
+      return arr[Math.floor(Math.random() * arr.length)]
+    }
+  
+    // select random varaible and display in console
+    let randomValidation2 = getRandomCharacterType(Object.values(arrayTypes));
+    console.log('Random validation type', randomValidation2);
   
   console.log(generateRandomString(ten));
+
+  var charLength = 10;
+  const validationCharType = [];
+
+ 
+  function getRandomCharacterType(arr) {
+    return arr[Math.floor(Math.random() * arr.length)]
+  }
+
+  // select random varaible and display in console
+  let randomValidation = getRandomCharacterType(Object.values(validationCharType));
+  console.log('Random validation type', randomValidation);
 
   /* console.log(validationTypes);
 
