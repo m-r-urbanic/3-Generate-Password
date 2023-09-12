@@ -22,6 +22,8 @@ JavaScript Array push (), W3Schools, https://www.w3schools.com/jsref/jsref_push.
 Get random variable with javascript, W3Schools, https://stackoverflow.com/questions/49709371/get-random-variable-with-javascript
 Greater than or equal (>=), mdn_web_docs, https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal
 How to use JavaScript to show a confirm message, tutorialspoint, https://www.tutorialspoint.com/How-to-use-JavaScript-to-show-a-confirm-message
+Password Special Characters, OWASP, https://owasp.org/www-community/password-special-characters
+4 Ways to Generate Random Strings in JavaScript, SLING ACADEMY, https://www.slingacademy.com/article/ways-to-generate-random-strings-in-javascript/#:~:text=We%20can%20use%20the%20Math,using%20the%20charAt()%20function.
 
 
 ## License

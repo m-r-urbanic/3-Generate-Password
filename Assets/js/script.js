@@ -10,7 +10,7 @@ var uppercaseCharacter = '2';
 var numericCharacter = '3';
 var specialCharacter = '4';
 
-// create array of variable types
+/* // create array of variable types
 const validationTypes = [];
 
 // Write password to the #password input
@@ -68,9 +68,30 @@ function writePassword() {
   }
 
   // Call results
-  promptResult();
+  promptResult(); */
 
-  console.log(validationTypes);
+
+  const special = ' !"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~';
+  var lowercase;
+  lowercase = 'abcdefghijklmnopqrstuvwxyz';
+  var uppercase;
+  uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  var numeric;
+  numeric = '1234567890';
+  var ten = 10;
+
+  const generateRandomString = (length) => {
+    let result = '';
+    const charactersLength = special.length;
+    for (let i = 0; i < length; i++) {
+      result += special.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+  };
+  
+  console.log(generateRandomString(ten));
+
+  /* console.log(validationTypes);
 
   // create function that gets random type
   function getRandomCharacterType(arr) {
@@ -79,7 +100,7 @@ function writePassword() {
 
   // select random varaible and display in console
   let randomValidation = getRandomCharacterType(Object.values(validationTypes));
-  console.log('Random validation type', randomValidation);
+  console.log('Random validation type', randomValidation); */
 
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -87,7 +108,7 @@ function writePassword() {
   // Set contents of the password textbox equal to password variable
   passwordText.value = password;
 
-}
+//}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
