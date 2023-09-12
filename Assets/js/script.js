@@ -26,7 +26,7 @@ function writePassword() {
 
   // Validate that the user chose at least one prompt type
   function promptResult(){
-  if (choiceLowercase == true || choiceUppercase == true)
+  if (choiceLowercase || choiceUppercase)
   {
     window.alert("sometext");
   }
