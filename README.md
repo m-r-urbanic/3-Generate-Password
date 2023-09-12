@@ -10,9 +10,13 @@ This project can be downloaded (as a whole) and ran in Visual Studio Code with n
 
 ## Usage
 
+https://m-r-urbanic.github.io/3-Generate-Password/
+
 Open the application and click the "Generate Password" button. You will be greeted with an instruction guide. You will be prompted to choose from four different character types to make up your random password. Select 'Cancel' to deny that character type, select 'Ok' to use that type. Then put in a number between 8 and 128 to select the number of characters your password should be.
 
 If you do not follow the instructions, you will have to restart that criteria selection phase.
+
+![image of refactored webpage](assets/images/screenshot.png)
 
 ## Credits
 
