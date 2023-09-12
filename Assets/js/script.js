@@ -1,4 +1,4 @@
-// Assignment Code
+// declare variables
 var generateBtn = document.querySelector("#generate");
 var choiceLowercase ;
 var choiceUppercase;
@@ -15,11 +15,11 @@ lowercaseCharacter = 'abcdefghijklmnopqrstuvwxyz';
 uppercaseCharacter = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 numericCharacter = '1234567890';
 specialCharacter = ' !"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~';
-var ten = 10;
-var resulty = [];
 
+// create array that password will be stored in as it is generated
+var passwordArray = [];
 // create array of variable types
-const validationTypes = [];
+var validationTypes = [];
 
 // Write password to the #password input
 function writePassword() {
@@ -78,11 +78,8 @@ function writePassword() {
   // Call results
   promptResult(); 
 
-
-
-  const arrayTypes = [lowercaseCharacter, uppercaseCharacter, numericCharacter, specialCharacter];
-
-  function makeResult(){
+  // make the password based on the selected parameters
+  function makePassword(){
       
       // create function that gets random type
       function getRandomCharacterType(arr) {
@@ -90,9 +87,10 @@ function writePassword() {
       }
 
       // select random varaible and display in console
-      let randomValidation2 = getRandomCharacterType(Object.values(arrayTypes));
-      console.log('Random validation type', randomValidation2);
+      let randomValidation2 = getRandomCharacterType(Object.values(validationTypes));
+      //console.log('Random validation type', randomValidation2);
 
+      // generate a random character based on the selected character type
       const generateRandomString = (length) => {
         let result = '';
         const charactersLength = randomValidation2.length;
@@ -102,20 +100,19 @@ function writePassword() {
         return result;
       };
 
-      resulty.push(generateRandomString(1));
+      passwordArray.push(generateRandomString(1));
   }
-      
-      for (var i = 0; i < ten; i++) {
-        makeResult();
-      }
-      
-      console.log(resulty);
-      console.log(resulty.join(''));
-  
-  console.log(generateRandomString(ten));
- 
+  // loop through selecting a random character from a random character type for the number of characters selected
+  for (var i = 0; i < passwordLength; i++) {
+    makePassword();
+  }
 
-  var password = generatePassword();
+  //turn make password array into string
+  password = passwordArray.join('');
+  // clear password array to make sure that there is a new password, not just a password appended onto the old one
+  passwordArray = [];
+
+
   var passwordText = document.querySelector("#password");
 
   // Set contents of the password textbox equal to password variable
