@@ -16,7 +16,7 @@ Open the application and click the "Generate Password" button. You will be greet
 
 If you do not follow the instructions, you will have to restart that criteria selection phase.
 
-![image of refactored webpage](Assets/images/screenshot.png)
+![image of refactored webpage](assets/images/screenshot.png)
 
 ## Credits
 
